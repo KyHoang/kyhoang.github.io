@@ -123,7 +123,7 @@ window.onclick = function(event) {
 <h5 id="baimchon" style="color:Green;">Conversation - Beginner Speed (1)</h5>
 <table>
 	<tr>
-		<th><audio controls id="bainghe" source src="/eng-breaking/mp3/L01/m01.mp3" type="audio/mpeg" ></audio></th>
+		<th><audio controls id="bainghe" source src="/eng-breaking/mp3/L01/m01.mp3" type="audio/mpeg" loop ></audio></th>
 		<th></th>
 	</tr>
 	<tr>
@@ -132,7 +132,7 @@ window.onclick = function(event) {
 	</tr>
 
 	<tr>
-		<th><form><input onclick="phatlai()" id="nutradio" type="radio"  >  loop. </input> </form></th>
+		<th><form><input onclick="phatlai()" id="nutradio" type="radio" checked>  loop. </input> </form></th>
 		<th><a id="baixem" href ="/eng-breaking/pdf/text-01-0102.pdf" target="_blank" type= "application/pdf"> Text </a></th>
 	</tr>
 </table>
@@ -140,7 +140,7 @@ window.onclick = function(event) {
 <h5></h5>
 <script>
 var x = document.getElementById("bainghe");
-var n = 0;
+var n = 1;
 function phatlai() { 
   n = n + 1;
   if ( n % 2 == 1 ) {
