@@ -8,7 +8,8 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-<style>
+
+  <style>
 .dropbtn {
   background-color: #3498DB;
   color: white;
@@ -74,7 +75,7 @@
 </nav>
 <div class="container" style="margin-top:30px">
 <div class="dropdown">
-<h3>Giáo trình tiếng Anh của Eng Breaking</h3>
+<h3>Học tiếng Anh theo Eng Breaking</h3>
 <h5><a href ="/eng-breaking/pdf/huongdanbai.pdf" target="_blank" type= "application/pdf">Hướng Dẫn Học</a></h5>
 <h4><button onclick="myFunction()" class="dropbtn">Chọn Bài Học (có 12 bài)</button></h4>
   <div id="myDropdown" class="dropdown-content">
@@ -116,17 +117,37 @@ window.onclick = function(event) {
 }
 /* Khi chon 1 bai hoc thi Bai chon cua id baidacChon se thay doi */
 
-
 </script>
- 
 
 <h4 id="baichon" style="color:Green;">Lesson 01 - Introducing Yourself</h4>
 <h5 id="baimchon" style="color:Green;">Conversation - Beginner Speed (1)</h5>
-<p><audio controls id="bainghe" source src="/eng-breaking/mp3/L01/m01.mp3" type="audio/mpeg" ></audio></p>
-<h5><a id="baixem" href ="/eng-breaking/pdf/text-01-0102.pdf" target="_blank" type= "application/pdf">Text</a></h5>
-
-
+<table>
+	<tr>
+		<th><audio controls id="bainghe" source src="/eng-breaking/mp3/L01/m01.mp3" type="audio/mpeg" ></audio></th>
+		<th></th>
+	</tr>
+	<tr>
+		<th><form><input onclick="phatlai()" id="nutradio" type="radio"  >  loop. </input> </form></th>
+		<th><a id="baixem" href ="/eng-breaking/pdf/text-01-0102.pdf" target="_blank" type= "application/pdf"> Text </a></th>
+	</tr>
+</table>
 <br>
+<h5></h5>
+<script>
+var x = document.getElementById("bainghe");
+var n = 0;
+function phatlai() { 
+  n = n + 1;
+  if ( n % 2 == 1 ) {
+    x.loop = true;
+	document.getElementById("nutradio").checked=true;
+	} else {
+	x.loop = false;
+	document.getElementById("nutradio").checked=false;
+  }
+} 
+</script>
+
 <script>
 var bchon="/eng-breaking/mp3/",bchon1="L01/",bchon2="m01.mp3";
 var bxemc="/eng-breaking/pdf/",bxemc1="text-01-",bxemc2="-0102.pdf";
@@ -295,7 +316,7 @@ function getmBai11() {
   document.getElementById("baixem").href=bxemc+bxemc1+bxemc2;
 }
 function getmBai12() {
-  document.getElementById("baimchon").innerHTML="Vocabulary (12)";
+  document.getElementById("baimchon").innerHTML="Vocabulary - Slang and idoms - Abbreviations (12)";
   bchon2="m00.mp3";
   document.getElementById("bainghe").src=bchon+bchon1+bchon2;
   bxemc2=".pdf";
@@ -305,7 +326,7 @@ function getmBai12() {
 </script>
 
 <div class="dropdown">
- <button onclick="myFunctions()" class="dropbtn">Chọn Mục Bài Học (mỗi bài có 12 mục)</button>
+ <button onclick="myFunctions()" class="dropbtn">Chọn Mục của Bài học (mỗi bài có 12 mục)</button>
   <div id="myDropdowns" class="dropdown-content">
     <a onclick="getmBai01()">Conversation - Beginner Speed (1)</a>
     <a onclick="getmBai02()">Conversation - Native Speed (2)</a>
@@ -318,7 +339,7 @@ function getmBai12() {
     <a onclick="getmBai09()">Point of View - Future Tense Story - Beginner Speed (9)</a>
     <a onclick="getmBai10()">Point of View - Future Tense Story - Native Speed (10)</a>
     <a onclick="getmBai11()">Point of View - Future Tense - Q_A (11)</a>
-    <a onclick="getmBai12()">Vocabulary (12)</a>
+    <a onclick="getmBai12()">Vocabulary - Slang and idoms - Abbreviations (12)</a>
   </div>
 </div>
 
