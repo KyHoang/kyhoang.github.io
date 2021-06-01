@@ -77,7 +77,7 @@
 <div class="dropdown">
 <h4>Học tiếng Anh theo Eng Breaking</h4>
 <h5><a href ="/eng-breaking/pdf/huongdanbai.pdf" target="_blank" type= "application/pdf">Xem hướng dẫn (click)</a></h5>
-<h4><button onclick="myFunction()" class="dropbtn">Chọn Bài Học (có 12 bài)</button></h4>
+<h4><button onclick="myFunction()" class="dropbtn">1. Chọn một bài học (trong 12 bài)</button></h4>
   <div id="myDropdown" class="dropdown-content">
     <a onclick="getBai01()">Lesson 01 - Introducing Yourself</a>
     <a onclick="getBai02()">Lesson 02 - What kind of music do you like</a>
@@ -118,9 +118,32 @@ window.onclick = function(event) {
 /* Khi chon 1 bai hoc thi Bai chon cua id baidacChon se thay doi */
 
 </script>
-
+<div class="dropdown">
+    <button onclick="myFunctions()" class="dropbtn">2. Chọn một mục của bài học (trong 12 mục)</button>
+     <div id="myDropdowns" class="dropdown-content">
+       <a onclick="getmBai01()">Conversation - Beginner Speed (1)</a>
+       <a onclick="getmBai02()">Conversation - Native Speed (2)</a>
+       <a onclick="getmBai03()">Point of View - Present Tense Story - Beginner Speed (3)</a>
+       <a onclick="getmBai04()">Point of View - Present Tense Story - Native Speed (4)</a>
+       <a onclick="getmBai05()">Point of View - Present Tense - Q_A (5)</a>
+       <a onclick="getmBai06()">Point of View - Past Tense Story - Beginner Speed (6)</a>
+       <a onclick="getmBai07()">Point of View - Past Tense Story - Native Speed (7)</a>
+       <a onclick="getmBai08()">Point of View - Past Tense - Q_A (8)</a>
+       <a onclick="getmBai09()">Point of View - Future Tense Story - Beginner Speed (9)</a>
+       <a onclick="getmBai10()">Point of View - Future Tense Story - Native Speed (10)</a>
+       <a onclick="getmBai11()">Point of View - Future Tense - Q_A (11)</a>
+       <a onclick="getmBai12()">Vocabulary (12)</a>
+     </div>
+</div>
+<br>
+<br>
+<h5>Bài và mục vừa chọn là:</h5>
+<br> 
 <h4 id="baichon" style="color:Green;">Lesson 01 - Introducing Yourself</h4>
 <h5 id="baimchon" style="color:Green;">Conversation - Beginner Speed (1)</h5>
+<br>
+<h5>3. Click tiếp để bắt đầu học:</h5> 
+
 <table>
 	<tr>
 		<th><audio controls id="bainghe" source src="/eng-breaking/mp3/L01/m01.mp3" type="audio/mpeg" loop ></audio></th>
@@ -330,23 +353,6 @@ function getmBai12() {
 
 </script>
 
-<div class="dropdown">
- <button onclick="myFunctions()" class="dropbtn">Chọn Mục của Bài học (mỗi bài có 12 mục)</button>
-  <div id="myDropdowns" class="dropdown-content">
-    <a onclick="getmBai01()">Conversation - Beginner Speed (1)</a>
-    <a onclick="getmBai02()">Conversation - Native Speed (2)</a>
-    <a onclick="getmBai03()">Point of View - Present Tense Story - Beginner Speed (3)</a>
-    <a onclick="getmBai04()">Point of View - Present Tense Story - Native Speed (4)</a>
-    <a onclick="getmBai05()">Point of View - Present Tense - Q_A (5)</a>
-    <a onclick="getmBai06()">Point of View - Past Tense Story - Beginner Speed (6)</a>
-    <a onclick="getmBai07()">Point of View - Past Tense Story - Native Speed (7)</a>
-    <a onclick="getmBai08()">Point of View - Past Tense - Q_A (8)</a>
-    <a onclick="getmBai09()">Point of View - Future Tense Story - Beginner Speed (9)</a>
-    <a onclick="getmBai10()">Point of View - Future Tense Story - Native Speed (10)</a>
-    <a onclick="getmBai11()">Point of View - Future Tense - Q_A (11)</a>
-    <a onclick="getmBai12()">Vocabulary (12)</a>
-  </div>
-</div>
 
 <script>
 /* When the user clicks on the button, 
